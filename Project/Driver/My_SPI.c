@@ -1,6 +1,5 @@
 #include "stm32f4xx_conf.h"
 #include "stm32f4xx_spi.h"
-#include "stm32f4xx_rcc.h"
 #include "My_SPI.h"
 #include "My_GPIO.h"
 

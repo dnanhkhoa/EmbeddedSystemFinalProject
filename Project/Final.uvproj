@@ -459,6 +459,28 @@
         </Group>
         <Group>
           <GroupName>My Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>My_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\My_GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\My_SPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\My_Button.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\My_LED.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>User</GroupName>

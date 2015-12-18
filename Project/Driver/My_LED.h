@@ -1,0 +1,15 @@
+#ifndef _MY_LED_H
+#define _MY_LED_H
+
+typedef enum {
+	LED_Green =	GPIO_Pin_12,
+	LED_Blue = GPIO_Pin_13,
+	LED_Red = GPIO_Pin_14,
+	LED_Orange = GPIO_Pin_15
+} LEDS;
+
+/*-------------------------------- Prototype --------------------------------*/
+void My_LED_On(LEDS led);
+void My_LED_Off(LEDS led);
+
+#endif
