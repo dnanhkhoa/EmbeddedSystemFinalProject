@@ -35,3 +35,4 @@
 .\out\my_led.o: .\Lib\CMSIS\inc\stm32f4xx_dcmi.h
 .\out\my_led.o: .\Lib\CMSIS\inc\stm32f4xx_fsmc.h
 .\out\my_led.o: Driver\my_led.h
+.\out\my_led.o: Driver\my_gpio.h

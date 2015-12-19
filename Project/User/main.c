@@ -21,10 +21,11 @@
 int main(void) {
     //handle_main_menu();
     my_button_init();
+	my_led_init();
 	
 	while (1) {
 		// do nothing
-		my_led_on(LED_Red);
+		
 	}
 	
 	return 0;

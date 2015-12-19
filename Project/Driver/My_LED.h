@@ -5,12 +5,13 @@
 
 typedef enum {
 	LED_Green =	GPIO_Pin_12,
-	LED_Blue = GPIO_Pin_13,
+	LED_Orange = GPIO_Pin_13,
 	LED_Red = GPIO_Pin_14,
-	LED_Orange = GPIO_Pin_15
+	LED_Blue = GPIO_Pin_15
 } LEDS;
 
 /*-------------------------------- Prototype --------------------------------*/
+void my_led_init(void);
 void my_led_on(LEDS led);
 void my_led_off(LEDS led);
 
