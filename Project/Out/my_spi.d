@@ -1,4 +1,4 @@
-.\out\my_spi.o: Driver\My_SPI.c
+.\out\my_spi.o: Driver\my_spi.c
 .\out\my_spi.o: .\Lib\ST\stm32f4xx_conf.h
 .\out\my_spi.o: .\Lib\CMSIS\inc\stm32f4xx_adc.h
 .\out\my_spi.o: .\Lib\ST\stm32f4xx.h
@@ -34,5 +34,5 @@
 .\out\my_spi.o: .\Lib\CMSIS\inc\stm32f4xx_dac.h
 .\out\my_spi.o: .\Lib\CMSIS\inc\stm32f4xx_dcmi.h
 .\out\my_spi.o: .\Lib\CMSIS\inc\stm32f4xx_fsmc.h
-.\out\my_spi.o: Driver\My_SPI.h
-.\out\my_spi.o: Driver\My_GPIO.h
+.\out\my_spi.o: Driver\my_spi.h
+.\out\my_spi.o: Driver\my_gpio.h

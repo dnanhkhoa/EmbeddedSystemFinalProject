@@ -1,6 +1,8 @@
 #ifndef _MY_LED_H
 #define _MY_LED_H
 
+#include "stm32f4xx_gpio.h"
+
 typedef enum {
 	LED_Green =	GPIO_Pin_12,
 	LED_Blue = GPIO_Pin_13,

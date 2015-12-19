@@ -1,4 +1,4 @@
-.\out\my_button.o: My_Button.c
+.\out\my_button.o: Driver\my_button.c
 .\out\my_button.o: .\Lib\ST\stm32f4xx_conf.h
 .\out\my_button.o: .\Lib\CMSIS\inc\stm32f4xx_adc.h
 .\out\my_button.o: .\Lib\ST\stm32f4xx.h
@@ -34,4 +34,4 @@
 .\out\my_button.o: .\Lib\CMSIS\inc\stm32f4xx_dac.h
 .\out\my_button.o: .\Lib\CMSIS\inc\stm32f4xx_dcmi.h
 .\out\my_button.o: .\Lib\CMSIS\inc\stm32f4xx_fsmc.h
-.\out\my_button.o: .\Driver\My_GPIO.h
+.\out\my_button.o: Driver\my_gpio.h

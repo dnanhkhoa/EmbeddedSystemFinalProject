@@ -10,11 +10,22 @@
  * Email: ddthach95@gmail.com
  */
 
+#include "stm32f4xx_conf.h"
+#include "my_button.h"
+#include "my_led.h"
 #include "menu.h"
+#include "interrupt_handle.h"
 
 /** main function
  */
 int main(void) {
-    handle_main_menu();
-    return 0;
+    //handle_main_menu();
+    my_button_init();
+	
+	while (1) {
+		// do nothing
+		my_led_on(LED_Red);
+	}
+	
+	return 0;
 }

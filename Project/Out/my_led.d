@@ -1,4 +1,4 @@
-.\out\my_led.o: My_LED.c
+.\out\my_led.o: Driver\my_led.c
 .\out\my_led.o: .\Lib\ST\stm32f4xx_conf.h
 .\out\my_led.o: .\Lib\CMSIS\inc\stm32f4xx_adc.h
 .\out\my_led.o: .\Lib\ST\stm32f4xx.h
@@ -34,4 +34,4 @@
 .\out\my_led.o: .\Lib\CMSIS\inc\stm32f4xx_dac.h
 .\out\my_led.o: .\Lib\CMSIS\inc\stm32f4xx_dcmi.h
 .\out\my_led.o: .\Lib\CMSIS\inc\stm32f4xx_fsmc.h
-.\out\my_led.o: .\Driver\My_LED.h
+.\out\my_led.o: Driver\my_led.h

@@ -1,7 +1,7 @@
 #include "stm32f4xx_conf.h"
 #include "stm32f4xx_spi.h"
-#include "My_SPI.h"
-#include "My_GPIO.h"
+#include "my_spi.h"
+#include "my_gpio.h"
 
 /** Init SPI
  */
@@ -32,7 +32,7 @@ void my_spi_init (int SPIx, int mode) {
 	// All SPIx uses default Pin pack 1
 	switch (SPIx) {
 		case MY_SPI1: {
-			My_GPIO_Init(MY_GPIOA, GPIO_Mode_AF, GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7
+			my_gpio_init(MY_GPIOA, GPIO_Mode_AF, GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
 			nvic_init.NVIC_IRQChannel = SPI1_IRQn;
@@ -54,7 +54,7 @@ void my_spi_init (int SPIx, int mode) {
 		}
 		
 		case MY_SPI2: {
-			My_GPIO_Init(MY_GPIOC, GPIO_Mode_AF, GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_10
+			my_gpio_init(MY_GPIOC, GPIO_Mode_AF, GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_10
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
 			nvic_init.NVIC_IRQChannel = SPI2_IRQn;
@@ -76,7 +76,7 @@ void my_spi_init (int SPIx, int mode) {
 		}
 		
 		case MY_SPI3: {
-			My_GPIO_Init(MY_GPIOB, GPIO_Mode_AF, GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5
+			my_gpio_init(MY_GPIOB, GPIO_Mode_AF, GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
 			nvic_init.NVIC_IRQChannel = SPI3_IRQn;
@@ -99,7 +99,7 @@ void my_spi_init (int SPIx, int mode) {
 		
 		// No interrupt
 		case MY_SPI4: {
-			My_GPIO_Init(MY_GPIOE, GPIO_Mode_AF, GPIO_Pin_2 | GPIO_Pin_5 | GPIO_Pin_6
+			my_gpio_init(MY_GPIOE, GPIO_Mode_AF, GPIO_Pin_2 | GPIO_Pin_5 | GPIO_Pin_6
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
 			GPIO_PinAFConfig(GPIOE, GPIO_PinSource2, GPIO_AF_SPI4);
@@ -117,7 +117,7 @@ void my_spi_init (int SPIx, int mode) {
 		
 		// No interrupt
 		case MY_SPI5: {
-			My_GPIO_Init(MY_GPIOF, GPIO_Mode_AF, GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9
+			my_gpio_init(MY_GPIOF, GPIO_Mode_AF, GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
 			GPIO_PinAFConfig(GPIOF, GPIO_PinSource7, GPIO_AF_SPI5);
@@ -135,7 +135,7 @@ void my_spi_init (int SPIx, int mode) {
 		
 		// No interrupt
 		case MY_SPI6: {
-			My_GPIO_Init(MY_GPIOG, GPIO_Mode_AF, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14
+			my_gpio_init(MY_GPIOG, GPIO_Mode_AF, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
 			GPIO_PinAFConfig(GPIOG, GPIO_PinSource12, GPIO_AF_SPI6);
@@ -161,6 +161,6 @@ void my_spi_send(int SPIx, char* data) {
 
 /** Receive data from SPI
  */
-void my_spi_receive(int SPIx) {
+char* my_spi_receive(int SPIx) {
 	
 }

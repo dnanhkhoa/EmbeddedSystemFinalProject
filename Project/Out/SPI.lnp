@@ -8,11 +8,13 @@
 ".\out\stm32f4xx_spi.o"
 ".\out\stm32f4xx_syscfg.o"
 ".\out\stm32f4xx_usart.o"
-".\out\my_gpio.o"
-".\out\my_spi.o"
 ".\out\my_button.o"
+".\out\my_gpio.o"
 ".\out\my_led.o"
+".\out\my_spi.o"
+".\out\my_usart.o"
 ".\out\main.o"
+".\out\interrupt_handle.o"
 --ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Out\SPI.map" -o .\Out\SPI.axf

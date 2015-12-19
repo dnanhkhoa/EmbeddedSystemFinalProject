@@ -1,7 +1,7 @@
 #include "stm32f4xx_conf.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
-#include "My_GPIO.h"
+#include "my_gpio.h"
 
 /** Init GPIO
  */
