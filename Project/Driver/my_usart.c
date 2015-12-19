@@ -17,8 +17,8 @@ void my_usart_init(int USARTx) {
 	usart_init.USART_WordLength				= USART_WordLength_8b;
 	
 	nvic_init.NVIC_IRQChannelCmd = ENABLE;
-	nvic_init.NVIC_IRQChannelPreemptionPriority = 1;
-	nvic_init.NVIC_IRQChannelSubPriority = 1;	
+	nvic_init.NVIC_IRQChannelPreemptionPriority = 0;
+	nvic_init.NVIC_IRQChannelSubPriority = 0;	
 	
 	// Use default pin pack 1 for all USART
 	switch (USARTx) {
@@ -27,12 +27,16 @@ void my_usart_init(int USARTx) {
 			GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_USART1);
 			GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_USART1);
 			
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+			// Dung: phai cap xung cho USART truoc khi bat interrupt - USART_ITConfig
+			
 			nvic_init.NVIC_IRQChannel = USART1_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 			USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
-		
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+			
+			//RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+			// Sai
 			
 			USART_Init(USART1, &usart_init);
 			
@@ -46,12 +50,12 @@ void my_usart_init(int USARTx) {
 			GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
 			GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
 			
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+			
 			nvic_init.NVIC_IRQChannel = USART2_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
 			USART_ITConfig(USART2, USART_IT_TXE, ENABLE);
-		
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 			
 			USART_Init(USART2, &usart_init);
 			
@@ -65,12 +69,12 @@ void my_usart_init(int USARTx) {
 			GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_USART3);
 			GPIO_PinAFConfig(GPIOB, GPIO_PinSource11, GPIO_AF_USART3);
 			
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+			
 			nvic_init.NVIC_IRQChannel = USART3_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
 			USART_ITConfig(USART3, USART_IT_TXE, ENABLE);
-		
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
 			
 			USART_Init(USART3, &usart_init);
 			
@@ -86,12 +90,12 @@ void my_usart_init(int USARTx) {
 			GPIO_PinAFConfig(GPIOC, GPIO_PinSource6, GPIO_AF_USART6);
 			GPIO_PinAFConfig(GPIOC, GPIO_PinSource7, GPIO_AF_USART6);
 			
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART6, ENABLE);
+			
 			nvic_init.NVIC_IRQChannel = USART6_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART6, USART_IT_RXNE, ENABLE);
 			USART_ITConfig(USART6, USART_IT_TXE, ENABLE);
-		
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART6, ENABLE);
 			
 			USART_Init(USART6, &usart_init);
 			

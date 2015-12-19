@@ -19,7 +19,7 @@ void my_button_init (void) {
 	
 	nvic_init.NVIC_IRQChannel = EXTI0_IRQn;
 	nvic_init.NVIC_IRQChannelCmd = ENABLE;
-	nvic_init.NVIC_IRQChannelPreemptionPriority = 0;
-	nvic_init.NVIC_IRQChannelSubPriority = 0;
+	nvic_init.NVIC_IRQChannelPreemptionPriority = 1;
+	nvic_init.NVIC_IRQChannelSubPriority = 1;
 	NVIC_Init(&nvic_init);
 }

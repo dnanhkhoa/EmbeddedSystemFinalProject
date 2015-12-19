@@ -16,9 +16,10 @@ void EXTI0_IRQHandler (void) {
 /**
  * Handle USART1 interrupt
  */
-void USART1_IRQHandler (void) {
-    my_led_on(LED_Red);
-    // Handle receive event
+void USART1_IRQHandler (void) {	
+	my_led_on(LED_Green);
+	
+	// Handle receive event
     if(USART_GetITStatus(USART1, USART_IT_RXNE)) {
         
     }

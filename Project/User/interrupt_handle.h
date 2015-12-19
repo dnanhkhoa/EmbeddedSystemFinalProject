@@ -3,5 +3,6 @@
 
 /*-------------------------------- Prototype --------------------------------*/
 extern void EXTI0_IRQHandler(void);
+extern void USART1_IRQHandler(void);
 
 #endif

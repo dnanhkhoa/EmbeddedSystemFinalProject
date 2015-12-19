@@ -35,16 +35,16 @@ void my_spi_init (int SPIx, int mode) {
 			my_gpio_init(MY_GPIOA, GPIO_Mode_AF, GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
+			GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1);
+			GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1);
+			GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1);
+			
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
+			
 			nvic_init.NVIC_IRQChannel = SPI1_IRQn;
 			NVIC_Init(&nvic_init);
 			SPI_ITConfig(SPI1, SPI_IT_RXNE, ENABLE);
 			SPI_ITConfig(SPI1, SPI_IT_TXE, ENABLE);
-			
-			GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1);
-			GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1);
-			GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1);
-
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
 			
 			SPI_Init(SPI1, &spi_init);
 			
@@ -57,16 +57,16 @@ void my_spi_init (int SPIx, int mode) {
 			my_gpio_init(MY_GPIOC, GPIO_Mode_AF, GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_10
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
+			GPIO_PinAFConfig(GPIOC, GPIO_PinSource2, GPIO_AF_SPI2);
+			GPIO_PinAFConfig(GPIOC, GPIO_PinSource3, GPIO_AF_SPI2);
+			GPIO_PinAFConfig(GPIOC, GPIO_PinSource10, GPIO_AF_SPI2);
+			
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
+			
 			nvic_init.NVIC_IRQChannel = SPI2_IRQn;
 			NVIC_Init(&nvic_init);
 			SPI_ITConfig(SPI2, SPI_IT_RXNE, ENABLE);
 			SPI_ITConfig(SPI2, SPI_IT_TXE, ENABLE);
-			
-			GPIO_PinAFConfig(GPIOC, GPIO_PinSource2, GPIO_AF_SPI2);
-			GPIO_PinAFConfig(GPIOC, GPIO_PinSource3, GPIO_AF_SPI2);
-			GPIO_PinAFConfig(GPIOC, GPIO_PinSource10, GPIO_AF_SPI2);
-
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
 			
 			SPI_Init(SPI2, &spi_init);
 			
@@ -79,16 +79,16 @@ void my_spi_init (int SPIx, int mode) {
 			my_gpio_init(MY_GPIOB, GPIO_Mode_AF, GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5
 									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 			
+			GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_SPI3);
+			GPIO_PinAFConfig(GPIOB, GPIO_PinSource4, GPIO_AF_SPI3);
+			GPIO_PinAFConfig(GPIOB, GPIO_PinSource5, GPIO_AF_SPI3);
+			
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI3, ENABLE);
+			
 			nvic_init.NVIC_IRQChannel = SPI3_IRQn;
 			NVIC_Init(&nvic_init);
 			SPI_ITConfig(SPI3, SPI_IT_RXNE, ENABLE);
 			SPI_ITConfig(SPI3, SPI_IT_TXE, ENABLE);
-			
-			GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_SPI3);
-			GPIO_PinAFConfig(GPIOB, GPIO_PinSource4, GPIO_AF_SPI3);
-			GPIO_PinAFConfig(GPIOB, GPIO_PinSource5, GPIO_AF_SPI3);
-
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI3, ENABLE);
 			
 			SPI_Init(SPI3, &spi_init);
 			
