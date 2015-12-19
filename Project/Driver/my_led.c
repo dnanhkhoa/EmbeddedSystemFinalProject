@@ -4,13 +4,13 @@
 
 /** Turn on single LED
  */
-void My_LED_On(LEDS led) {
+void my_led_on (LEDS led) {
 	GPIO_ResetBits(GPIOD, LED_Blue | LED_Green | LED_Red | LED_Orange);
 	GPIO_SetBits(GPIOD, led);
 }
 
 /** Turn off single LED
  */
-void My_LED_Off(LEDS led) {
+void my_led_off (LEDS led) {
 		GPIO_ResetBits(GPIOD, led);
 }

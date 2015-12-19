@@ -14,7 +14,7 @@
 #define MY_GPIOK	11
 
 /*-------------------------------- Prototype --------------------------------*/
-void My_GPIO_Init(int GPIOx, GPIOMode_TypeDef mode, int pinx, GPIOOType_TypeDef type
+void my_gpio_init(int GPIOx, GPIOMode_TypeDef mode, int pinx, GPIOOType_TypeDef type
 				  , GPIOSpeed_TypeDef speed, GPIOPuPd_TypeDef pupd);
 
 #endif

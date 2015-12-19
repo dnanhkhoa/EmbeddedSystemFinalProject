@@ -5,7 +5,7 @@
 
 /** Init GPIO
  */
-void My_GPIO_Init(int GPIOx, GPIOMode_TypeDef mode, int pinx, GPIOOType_TypeDef type
+void my_gpio_init (int GPIOx, GPIOMode_TypeDef mode, int pinx, GPIOOType_TypeDef type
 				  , GPIOSpeed_TypeDef speed, GPIOPuPd_TypeDef pupd) {
 					  
 	GPIO_InitTypeDef 	gpio_init;

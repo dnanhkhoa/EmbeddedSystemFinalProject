@@ -9,7 +9,7 @@ typedef enum {
 } LEDS;
 
 /*-------------------------------- Prototype --------------------------------*/
-void My_LED_On(LEDS led);
-void My_LED_Off(LEDS led);
+void my_led_on(LEDS led);
+void my_led_off(LEDS led);
 
 #endif

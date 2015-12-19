@@ -2,13 +2,13 @@
 #include "stm32f4xx_exti.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_syscfg.h"
-#include "My_GPIO.h"
+#include "my_gpio.h"
 
-void My_Button_Init(void) {
+void my_button_init (void) {
 	EXTI_InitTypeDef 	exti_init;
 	NVIC_InitTypeDef	nvic_init;
 	
-	My_GPIO_Init(MY_GPIOA, GPIO_Mode_IN, GPIO_Pin_0, GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_DOWN);
+	my_gpio_init(MY_GPIOA, GPIO_Mode_IN, GPIO_Pin_0, GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_DOWN);
 	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource0);
 	
 	exti_init.EXTI_Line = EXTI_Line0;

@@ -12,8 +12,8 @@
 #define MY_SPI6 6
 
 /*-------------------------------- Prototype --------------------------------*/
-void 	My_SPI_Init(int SPIx, int mode);
-void 	My_SPI_SendData(int SPIx, char* data);
-char* 	My_SPI_Receive(int SPIx);
+void 	my_spi_init(int SPIx, int mode);
+void 	my_spi_send(int SPIx, char* data);
+char* 	my_spi_receive(int SPIx);
 
 #endif

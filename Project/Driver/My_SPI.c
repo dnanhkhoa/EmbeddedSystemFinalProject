@@ -5,7 +5,7 @@
 
 /** Init SPI
  */
-void My_SPI_Init(int SPIx, int mode) {
+void my_spi_init (int SPIx, int mode) {
 	SPI_InitTypeDef		spi_init;
 	NVIC_InitTypeDef 	nvic_init;
 	
@@ -155,12 +155,12 @@ void My_SPI_Init(int SPIx, int mode) {
 
 /** Send data through SPI
  */
-void My_SPI_SendData(int SPIx, char* data) {
+void my_spi_send(int SPIx, char* data) {
 	
 }
 
 /** Receive data from SPI
  */
-void My_SPI_ReceiveData(int SPIx) {
+void my_spi_receive(int SPIx) {
 	
 }
