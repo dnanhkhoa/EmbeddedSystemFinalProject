@@ -10,10 +10,10 @@
  * Email: ddthach95@gmail.com
  */
 
-#include "stm32f4xx_conf.h"
 #include "my_button.h"
 #include "my_led.h"
 #include "my_usart.h"
+#include "my_delay.h"
 #include "interrupt_handle.h"
 
 
@@ -21,14 +21,13 @@
  */
 int main(void) {
     
-    // Initialize clock
+    // Init clock
     SystemInit();
-    
+    // Init user button
     my_button_init();
+    // Init LED
     my_led_init();
-    
-    my_usart_init(MY_USART1);
-    
+
     for (;;) {
         // Do nothing
     }

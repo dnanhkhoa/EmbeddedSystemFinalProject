@@ -96,61 +96,7 @@ void my_spi_init (int SPIx, int mode) {
 			
 			break;
 		}
-		
-		// No interrupt
-		case MY_SPI4: {
-			my_gpio_init(MY_GPIOE, GPIO_Mode_AF, GPIO_Pin_2 | GPIO_Pin_5 | GPIO_Pin_6
-									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
-			
-			GPIO_PinAFConfig(GPIOE, GPIO_PinSource2, GPIO_AF_SPI4);
-			GPIO_PinAFConfig(GPIOE, GPIO_PinSource5, GPIO_AF_SPI4);
-			GPIO_PinAFConfig(GPIOE, GPIO_PinSource6, GPIO_AF_SPI4);
-
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI4, ENABLE);
-			
-			SPI_Init(SPI4, &spi_init);
-			
-			SPI_Cmd(SPI4, ENABLE);
-			
-			break;
-		}
-		
-		// No interrupt
-		case MY_SPI5: {
-			my_gpio_init(MY_GPIOF, GPIO_Mode_AF, GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9
-									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
-			
-			GPIO_PinAFConfig(GPIOF, GPIO_PinSource7, GPIO_AF_SPI5);
-			GPIO_PinAFConfig(GPIOF, GPIO_PinSource8, GPIO_AF_SPI5);
-			GPIO_PinAFConfig(GPIOF, GPIO_PinSource9, GPIO_AF_SPI5);
-
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI5, ENABLE);
-			
-			SPI_Init(SPI5, &spi_init);
-			
-			SPI_Cmd(SPI5, ENABLE);
-			
-			break;
-		}
-		
-		// No interrupt
-		case MY_SPI6: {
-			my_gpio_init(MY_GPIOG, GPIO_Mode_AF, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14
-									 , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
-			
-			GPIO_PinAFConfig(GPIOG, GPIO_PinSource12, GPIO_AF_SPI6);
-			GPIO_PinAFConfig(GPIOG, GPIO_PinSource13, GPIO_AF_SPI6);
-			GPIO_PinAFConfig(GPIOG, GPIO_PinSource14, GPIO_AF_SPI6);
-
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI6, ENABLE);
-			
-			SPI_Init(SPI6, &spi_init);
-			
-			SPI_Cmd(SPI6, ENABLE);
-			
-			break;
-		}
-	}	
+	}
 }
 
 /** Send data through SPI
