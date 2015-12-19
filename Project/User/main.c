@@ -20,15 +20,16 @@
 /** main function
  */
 int main(void) {
-    //handle_main_menu();
+    
+    // Initialize clock
+    SystemInit();
+    
     my_button_init();
-	my_led_init();
-	my_usart_init(MY_USART1);
-	
-	while (1) {
-		// do nothing
-		
-	}
-	
-	return 0;
+    my_led_init();
+    
+    my_usart_init(MY_USART1);
+    
+    for (;;) {
+        // Do nothing
+    }
 }

@@ -6,8 +6,8 @@
 /** Config LED
  */
 void my_led_init(void) {
-	my_gpio_init(MY_GPIOD, GPIO_Mode_OUT, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15
-				, GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
+	my_gpio_init(MY_GPIOD, GPIO_Mode_OUT, LED_Blue | LED_Green | LED_Red | LED_Orange
+                , GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 }
 
 /** Turn on single LED

@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Final.uvproj
+Project File Date:  12/20/2015
+
+<h2>Output:</h2>
+Build target 'FinalProject'
+compiling my_usart.c...
+compiling main.c...
+compiling interrupt_handle.c...
+User\interrupt_handle.c(20): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5976 RO-data=424 RW-data=36 ZI-data=1636  
+".\Out\SPI.axf" - 0 Errors, 1 Warning(s).
+Load "C:\\Users\\AnhKhoa\\Desktop\\Box\\Projects\\Keil\\EmbeddedSystemFinalProject\\Project\\Out\\SPI.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FinalProject'
+compiling my_led.c...
+compiling interrupt_handle.c...
+User\interrupt_handle.c(21): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5972 RO-data=424 RW-data=36 ZI-data=1636  
+".\Out\SPI.axf" - 0 Errors, 1 Warning(s).
+Load "C:\\Users\\AnhKhoa\\Desktop\\Box\\Projects\\Keil\\EmbeddedSystemFinalProject\\Project\\Out\\SPI.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FinalProject'
+compiling main.c...
+linking...
+Program Size: Code=5972 RO-data=424 RW-data=36 ZI-data=1636  
+".\Out\SPI.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\AnhKhoa\\Desktop\\Box\\Projects\\Keil\\EmbeddedSystemFinalProject\\Project\\Out\\SPI.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
