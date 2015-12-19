@@ -13,8 +13,9 @@
 #include "stm32f4xx_conf.h"
 #include "my_button.h"
 #include "my_led.h"
-#include "menu.h"
+#include "my_usart.h"
 #include "interrupt_handle.h"
+
 
 /** main function
  */
@@ -22,6 +23,7 @@ int main(void) {
     //handle_main_menu();
     my_button_init();
 	my_led_init();
+	my_usart_init(MY_USART1);
 	
 	while (1) {
 		// do nothing

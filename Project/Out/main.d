@@ -36,5 +36,5 @@
 .\out\main.o: .\Lib\CMSIS\inc\stm32f4xx_fsmc.h
 .\out\main.o: .\Driver\my_button.h
 .\out\main.o: .\Driver\my_led.h
-.\out\main.o: User\menu.h
+.\out\main.o: .\Driver\my_usart.h
 .\out\main.o: User\interrupt_handle.h

@@ -23,9 +23,9 @@ void my_usart_init(int USARTx) {
 	// Use default pin pack 1 for all USART
 	switch (USARTx) {
 		case MY_USART1: {
-			my_gpio_init(MY_GPIOA, GPIO_Mode_AF, GPIO_Pin_9 | GPIO_Pin_10, GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_UP);
-			GPIO_PinAFConfig(GPIOA, GPIO_PinSource9, GPIO_AF_USART1);
-			GPIO_PinAFConfig(GPIOA, GPIO_PinSource10, GPIO_AF_USART1);
+			my_gpio_init(MY_GPIOB, GPIO_Mode_AF, GPIO_Pin_6 | GPIO_Pin_7, GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_UP);
+			GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_USART1);
+			GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_USART1);
 			
 			nvic_init.NVIC_IRQChannel = USART1_IRQn;
 			NVIC_Init(&nvic_init);
@@ -78,6 +78,8 @@ void my_usart_init(int USARTx) {
 			
 			break;
 		}
+		
+		// There is no interrupt for USART4, USART5
 		
 		case MY_USART6: {
 			my_gpio_init(MY_GPIOC, GPIO_Mode_AF, GPIO_Pin_6 | GPIO_Pin_7, GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_UP);
