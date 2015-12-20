@@ -4,12 +4,10 @@
 #ifndef _MY_LED_H
 #define _MY_LED_H
 
-#include "stm32f4xx_gpio.h"
-
-#define LED_GREEN   GPIO_Pin_12
-#define LED_ORANGE  GPIO_Pin_13
-#define LED_RED     GPIO_Pin_14
-#define LED_BLUE    GPIO_Pin_15
+#define LED_GREEN   ((uint16_t)0x1000)
+#define LED_ORANGE  ((uint16_t)0x2000)  
+#define LED_RED     ((uint16_t)0x4000)  
+#define LED_BLUE    ((uint16_t)0x8000)  
 
 /*-------------------------------- Prototype --------------------------------*/
 void my_led_init(void);

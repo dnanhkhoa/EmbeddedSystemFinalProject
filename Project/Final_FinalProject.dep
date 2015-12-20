@@ -316,7 +316,7 @@ I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_tim.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_wwdg.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\misc.h)(0x4EAA220A)
-F (.\Driver\my_button.c)(0x5676343A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_button.o --omf_browse .\out\my_button.crf --depend .\out\my_button.d)
+F (.\Driver\my_button.c)(0x5676494E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_button.o --omf_browse .\out\my_button.crf --depend .\out\my_button.d)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_exti.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\ST\stm32f4xx.h)(0x56233C5F)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\core_cm4.h)(0x4EAA2206)
@@ -389,7 +389,7 @@ I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_wwdg.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\misc.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_gpio.h)(0x5675B0FC)
-F (.\Driver\my_led.c)(0x56764128)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_led.o --omf_browse .\out\my_led.crf --depend .\out\my_led.d)
+F (.\Driver\my_led.c)(0x5676480C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_led.o --omf_browse .\out\my_led.crf --depend .\out\my_led.d)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_gpio.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\ST\stm32f4xx.h)(0x56233C5F)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\core_cm4.h)(0x4EAA2206)
@@ -463,7 +463,7 @@ I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\misc.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_spi.h)(0x56753BBB)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_gpio.h)(0x5675B0FC)
-F (.\Driver\my_usart.c)(0x56764179)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_usart.o --omf_browse .\out\my_usart.crf --depend .\out\my_usart.d)
+F (.\Driver\my_usart.c)(0x56765606)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_usart.o --omf_browse .\out\my_usart.crf --depend .\out\my_usart.d)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\ST\stm32f4xx_conf.h)(0x4EAA2228)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_adc.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\ST\stm32f4xx.h)(0x56233C5F)
@@ -537,8 +537,8 @@ I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_wwdg.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\misc.h)(0x4EAA220A)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_delay.h)(0x5675BF0E)
-F (.\Driver\my_menu.c)(0x5676341E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_menu.o --omf_browse .\out\my_menu.crf --depend .\out\my_menu.d)
-F (.\User\main.c)(0x5676413B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
+F (.\Driver\my_menu.c)(0x56764884)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_menu.o --omf_browse .\out\my_menu.crf --depend .\out\my_menu.d)
+F (.\User\main.c)(0x567651D6)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_button.h)(0x5675B42E)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_led.h)(0x5675B44D)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_gpio.h)(0x4EAA220A)
@@ -578,7 +578,7 @@ I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_usart.h)(0x56756802)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_delay.h)(0x5675BF0E)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\User\interrupt_handle.h)(0x5675BF24)
-F (.\User\interrupt_handle.c)(0x56763E62)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\interrupt_handle.o --omf_browse .\out\interrupt_handle.crf --depend .\out\interrupt_handle.d)
+F (.\User\interrupt_handle.c)(0x56765583)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\interrupt_handle.o --omf_browse .\out\interrupt_handle.crf --depend .\out\interrupt_handle.d)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_button.h)(0x5675B42E)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Driver\my_led.h)(0x5675B44D)
 I (C:\Users\AnhKhoa\Desktop\Box\Projects\Keil\EmbeddedSystemFinalProject\Project\Lib\CMSIS\inc\stm32f4xx_gpio.h)(0x4EAA220A)

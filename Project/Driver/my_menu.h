@@ -1,11 +1,12 @@
 #ifndef _MY_MENU_H
 #define _MY_MENU_H
 
+#define BUFFER_LENGTH (512 + 1) // 32 chars + 1 NULL
+
 typedef enum {
     MAIN_MENU,
     STUDENT_INFO,
     BASIC_OPERATION,
-    BASIC_OPERATION_INPUT_EXPRESSION,
     SIMPLE_LED,
     SIMPLE_LED_INPUT_COMMAND,
     ADVANCE_LED,
@@ -13,14 +14,21 @@ typedef enum {
     ADVANCE_LED_SET_DIRECTION,
     ADVANCE_LED_START,
     AUDIO,
-    ADDITION
+    ADDITION_FEATURE
 } PAGE_TYPE;
 
 /*----------------------------- Global variables ----------------------------*/
 extern PAGE_TYPE currentPage;
 
-
 /*-------------------------------- Prototype --------------------------------*/
-void menu_handle();
+void command_line_led_handle(char* command);
+char* expression_compute(char* expression);
 
+void menu_logic_handle(void);
+void menu_content_handle(void);
+void terminal_clear(void);
+void buffer_append(char character);
+void buffer_pop(void);
+char buffer_get(void);
+void buffer_clear(void);
 #endif

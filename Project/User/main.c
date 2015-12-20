@@ -10,13 +10,16 @@
  * Email: ddthach95@gmail.com
  */
 
+#include "stm32f4xx_gpio.h"
 #include "my_button.h"
 #include "my_led.h"
 #include "my_usart.h"
+#include "my_spi.h"
 #include "my_delay.h"
 #include "my_menu.h"
 
-/** main function
+/**
+ * Entry point
  */
 int main(void) {
 
@@ -39,9 +42,9 @@ int main(void) {
     my_usart_init(MY_USART_1);
 
     // Draw main menu
-    menu_handle();
+    menu_content_handle();
 
     for (;;) {
-        // Do nothing
+        // Loop forever
     }
 }
