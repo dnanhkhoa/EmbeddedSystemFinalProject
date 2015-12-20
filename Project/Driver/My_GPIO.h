@@ -1,5 +1,5 @@
 /**
- * Passed
+ * Test: Passed
  */
 #ifndef _GPIO_H
 #define _GPIO_H
@@ -13,11 +13,9 @@
 #define MY_GPIOG    7
 #define MY_GPIOH    8
 #define MY_GPIOI    9
-#define MY_GPIOJ    10
-#define MY_GPIOK    11
 
 /*-------------------------------- Prototype --------------------------------*/
-void my_gpio_init(int GPIOx, GPIOMode_TypeDef mode, int pinx, GPIOOType_TypeDef type
-                , GPIOSpeed_TypeDef speed, GPIOPuPd_TypeDef pupd);
+void my_gpio_init(uint16_t GPIOx, GPIOMode_TypeDef mode, uint16_t pinx, GPIOOType_TypeDef type,
+                  GPIOSpeed_TypeDef speed, GPIOPuPd_TypeDef pupd);
 
 #endif

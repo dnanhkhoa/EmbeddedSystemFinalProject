@@ -33,7 +33,6 @@ void my_usart_init(int USARTx) {
 			nvic_init.NVIC_IRQChannel = USART1_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-			USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
 			
 			//RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
 			// Sai
@@ -55,7 +54,6 @@ void my_usart_init(int USARTx) {
 			nvic_init.NVIC_IRQChannel = USART2_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
-			USART_ITConfig(USART2, USART_IT_TXE, ENABLE);
 			
 			USART_Init(USART2, &usart_init);
 			
@@ -74,7 +72,6 @@ void my_usart_init(int USARTx) {
 			nvic_init.NVIC_IRQChannel = USART3_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
-			USART_ITConfig(USART3, USART_IT_TXE, ENABLE);
 			
 			USART_Init(USART3, &usart_init);
 			
@@ -95,7 +92,6 @@ void my_usart_init(int USARTx) {
 			nvic_init.NVIC_IRQChannel = USART6_IRQn;
 			NVIC_Init(&nvic_init);
 			USART_ITConfig(USART6, USART_IT_RXNE, ENABLE);
-			USART_ITConfig(USART6, USART_IT_TXE, ENABLE);
 			
 			USART_Init(USART6, &usart_init);
 			

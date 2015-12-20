@@ -488,6 +488,11 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
+              <FileName>my_menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\my_menu.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\main.c</FilePath>

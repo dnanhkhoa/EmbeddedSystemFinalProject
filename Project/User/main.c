@@ -16,17 +16,28 @@
 #include "my_delay.h"
 #include "interrupt_handle.h"
 
-
 /** main function
  */
 int main(void) {
     
     // Init clock
     SystemInit();
+    
+    // Set 4 bits for preemption, 0 bits for sub priority
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+    
+    // Init sytem tick
+    systick_init();
+    
     // Init user button
     my_button_init();
+    
     // Init LED
     my_led_init();
+
+    systick_delay(3000);
+    
+    my_led_on(LED_Red | LED_Green);
 
     for (;;) {
         // Do nothing

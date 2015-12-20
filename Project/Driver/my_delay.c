@@ -1,5 +1,10 @@
+/**
+ * Test: Passed
+ */
 #include "stm32f4_discovery.h"
 #include "my_delay.h"
+
+volatile uint32_t g_systick_counter = 0;
 
 /**
  * Init SysTick
@@ -14,9 +19,6 @@ void systick_init (void)
     {
         // Do nothing
     }
-    
-    // Set 4 bits for preemption, 0 bits for sub priority
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
     // Set SysTick interrupt priority, 0 is the highest for all
     NVIC_SetPriority(SysTick_IRQn, 0);
 }
@@ -24,7 +26,7 @@ void systick_init (void)
 /**
  * Suspend execution of a program for a particular time
  */
-void systick_delay (volatile int millis)
+void systick_delay (volatile uint32_t millis)
 {
     g_systick_counter = millis;
     while (g_systick_counter)

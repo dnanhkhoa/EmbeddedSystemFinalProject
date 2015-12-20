@@ -1,5 +1,5 @@
 /**
- * Passed
+ * Test: Passed
  */
 #include "stm32f4xx_exti.h"
 #include "my_gpio.h"
