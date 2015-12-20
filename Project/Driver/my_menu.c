@@ -13,6 +13,8 @@ PAGE_TYPE currentPage = MAIN_MENU; // Default
 int endIndex = 0;
 char currentBuffer[BUFFER_LENGTH] = {0};
 
+bool stopFlag = true; // Flag to stop function
+
 /**
  * Compute an expression and return the result
  */
@@ -99,7 +101,8 @@ void menu_logic_handle (void) {
                 buffer_clear();
             } else if ((character >= 40 && character <= 43) ||
                         (character >= 45 && character <= 47) ||
-                        (character >= 48 && character <= 57)) {
+                        (character >= 48 && character <= 57) ||
+                        (character == 37)) {
 
                 buffer[0] = character;
                 my_usart_send(MY_USART_1, buffer);
@@ -113,12 +116,54 @@ void menu_logic_handle (void) {
             break;
         }
         case SIMPLE_LED: {
-            break;
-        }
-        case SIMPLE_LED_INPUT_COMMAND: {
+            character = buffer_get();
+            if (character == 27) { // ESC: 27
+                currentPage = MAIN_MENU;
+                menu_content_handle();
+                // Clear buffer
+                buffer_clear();
+                // Stop
+                stopFlag = true;
+            } else if (character == 13) { // Enter: 13
+                my_usart_send(MY_USART_1, "\r\n");
+                command_line_led_handle(currentBuffer);
+                // Clear buffer
+                buffer_clear();
+            } else if (character >= 33 && character <= 126) {
+                buffer[0] = character;
+                my_usart_send(MY_USART_1, buffer);
+            } else if (character == 8) {
+                buffer_pop(); // Backspace
+                buffer_pop();
+                my_usart_send(MY_USART_1, "\b \b");
+            } else {
+                buffer_pop();
+            }
             break;
         }
         case ADVANCE_LED: {
+            isTrash = false;
+            character = buffer_get();
+            switch (character) {
+                case '1':
+                    currentPage = ADVANCE_LED_SET_LED;
+                    break;
+                case '2':
+                    currentPage = ADVANCE_LED_SET_DIRECTION;
+                    break;
+                case '3':
+                    currentPage = ADVANCE_LED_START;
+                    break;
+                default:
+                    isTrash = true;
+                break;
+            }
+            // Clear buffer
+            buffer_clear();
+            // Show menu
+            if (!isTrash) {
+                menu_content_handle();
+            }
             break;
         }
         case ADVANCE_LED_SET_LED: {
@@ -193,23 +238,34 @@ void menu_content_handle (void) {
             my_usart_send(MY_USART_1, "Enter the command:\r\n");
             break;
         }
-        case SIMPLE_LED_INPUT_COMMAND: {
-            break;
-        }
         case ADVANCE_LED: {
+            my_usart_send(MY_USART_1, "***** ADVANCE LED *****\r\n");
+            my_usart_send(MY_USART_1, "Choose your option (1, 2, 3):\r\n");
+            my_usart_send(MY_USART_1, "1. Set LED (Default is Green LED).\r\n");
+            my_usart_send(MY_USART_1, "2. Set direction (Default is clockwise).\r\n");
+            my_usart_send(MY_USART_1, "3. Start.\r\n");
+            my_usart_send(MY_USART_1, "\r\nESC: Return previous menu.\r\n");
             break;
         }
         case ADVANCE_LED_SET_LED: {
+            my_usart_send(MY_USART_1, "***** SET LED *****\r\n");
+            my_usart_send(MY_USART_1, "ESC: Return previous menu.\r\n");
+            my_usart_send(MY_USART_1, "Enter your option (r, g, o, b):\r\n");
             break;
         }
         case ADVANCE_LED_SET_DIRECTION: {
+            my_usart_send(MY_USART_1, "***** SET DIRECTION *****\r\n");
+            my_usart_send(MY_USART_1, "ESC: Return previous menu.\r\n");
+            my_usart_send(MY_USART_1, "Enter your option (c, a):\r\n");
             break;
         }
         case ADVANCE_LED_START: {
+            my_usart_send(MY_USART_1, "***** LED IS RUNNING *****\r\n");
+            my_usart_send(MY_USART_1, "ESC: Return previous menu.\r\n");
             break;
         }
         case AUDIO: {
-            my_usart_send(MY_USART_1, "***** AUDIO *****\r\n");
+            my_usart_send(MY_USART_1, "***** PLAYING AUDIO *****\r\n");
             my_usart_send(MY_USART_1, "ESC: Return previous menu.\r\n");
             break;
         }
