@@ -26,9 +26,71 @@ char* expression_compute (char* expression) {
  * Handle led by command line
  */
 void command_line_led_handle (char* command) {
-    my_usart_send(MY_USART_1, "Your command: ");
-    my_usart_send(MY_USART_1, command);
-    my_usart_send(MY_USART_1, "\r\n");
+    if (false)
+		my_usart_send(MY_USART_1, "Wrong command!\r\n");
+	else {
+		char cmd = command[0];
+		char option = command[1];
+		int led;
+		bool flag;
+		
+		switch (option) {
+		case '1': {
+			led = LED_RED;
+			break;
+			}	
+		case '2': {
+			led = LED_GREEN;
+			break;
+			}
+		case '3': {
+			led = LED_BLUE;
+			break;
+			}
+		case '4': {
+			led = LED_ORANGE;
+			break;
+			}
+		case '5': {
+			led = LED_RED | LED_GREEN | LED_BLUE | LED_ORANGE;
+			break;
+			}
+		default: {
+			my_usart_send(MY_USART_1, "Wrong command!\r\n");
+			my_usart_send(MY_USART_1, "Try again:\r\n");
+			
+			flag = true;
+			
+			buffer_clear();
+			break;
+			}						
+		}
+
+		if (flag)
+			return;
+			
+		switch (cmd) {
+		case '1': {
+			my_led_on(led);
+			my_usart_send(MY_USART_1, "\r");
+			my_usart_send(MY_USART_1, "Your command: ");
+			break;
+			}
+		case '2': {
+			my_led_off(led);
+			my_usart_send(MY_USART_1, "\r");
+			my_usart_send(MY_USART_1, "Your command: ");
+			break;
+			}
+		default: {
+			my_usart_send(MY_USART_1, "Wrong command!\r\n");
+			my_usart_send(MY_USART_1, "Try again:\r\n");
+			
+			buffer_clear();
+			break;
+			}
+		}
+	}
 }
 
 /**
@@ -235,8 +297,10 @@ void menu_content_handle (void) {
             my_usart_send(MY_USART_1, "***** SIMPLE_LED *****\r\n");
             my_usart_send(MY_USART_1, "ESC: Return previous menu.\r\n");
             my_usart_send(MY_USART_1, "BACKSPACE: Delete previous character.\r\n");
-            my_usart_send(MY_USART_1, "Enter the command:\r\n");
-            break;
+            my_usart_send(MY_USART_1, "Enter the command: [1.on/ 2.off] [1.r/ 2.g/ 3.b/ 4.o/ 5.all] [ENTER]\r\n");
+            my_usart_send(MY_USART_1, "Example on led red: 11\r\n");
+			my_usart_send(MY_USART_1, "Your command: ");
+			break;
         }
         case ADVANCE_LED: {
             my_usart_send(MY_USART_1, "***** ADVANCE LED *****\r\n");
