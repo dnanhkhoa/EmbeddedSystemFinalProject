@@ -17,7 +17,7 @@ typedef enum {
 } PAGE_TYPE;
 
 /*----------------------------- Global variables ----------------------------*/
-PAGE_TYPE currentPage = MAIN_MENU;
+extern PAGE_TYPE currentPage;
 
 
 /*-------------------------------- Prototype --------------------------------*/

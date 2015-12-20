@@ -1,4 +1,7 @@
+#include "my_led.h"
 #include "my_menu.h"
+
+PAGE_TYPE currentPage = MAIN_MENU; // Default
 
 /**
  * Handle menu events
@@ -7,6 +10,7 @@ void menu_handle() {
     switch (currentPage)
     {
         case MAIN_MENU:
+            
             break;
         case STUDENT_INFO:
             break;

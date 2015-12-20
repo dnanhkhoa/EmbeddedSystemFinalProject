@@ -9,7 +9,7 @@
  * Config LED
  */
 void my_led_init(void) {
-    my_gpio_init(MY_GPIOD, GPIO_Mode_OUT, LED_Blue | LED_Green | LED_Red | LED_Orange,
+    my_gpio_init(MY_GPIOD, GPIO_Mode_OUT, LED_BLUE | LED_GREEN | LED_RED | LED_ORANGE,
                  GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 }
 
@@ -17,7 +17,7 @@ void my_led_init(void) {
  * Turn on LEDs
  */
 void my_led_on (uint16_t leds) {
-    GPIO_ResetBits(GPIOD, LED_Blue | LED_Green | LED_Red | LED_Orange);
+    GPIO_ResetBits(GPIOD, LED_BLUE | LED_GREEN | LED_RED | LED_ORANGE);
     GPIO_SetBits(GPIOD, leds);
 }
 

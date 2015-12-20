@@ -1,5 +1,5 @@
 /**
- * Passed
+ * Test: Passed
  */
 #ifndef _MY_BUTTON_H
 #define _MY_BUTTON_H
