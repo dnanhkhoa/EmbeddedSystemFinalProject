@@ -13,15 +13,14 @@ void my_spi_init (uint8_t SPIx, uint8_t mode) {
     // Config SPI mode
     if (mode == MODE_MASTER) {
         spi_init.SPI_Mode = SPI_Mode_Master;
-        spi_init.SPI_Direction = SPI_Direction_1Line_Tx;
     } else {
         spi_init.SPI_Mode = SPI_Mode_Slave;
-        spi_init.SPI_Direction = SPI_Direction_1Line_Rx;
     }
 
     // Config SPI
-    spi_init.SPI_CPOL = SPI_CPOL_High;
-    spi_init.SPI_CPHA = SPI_CPHA_1Edge;
+    spi_init.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+    spi_init.SPI_CPOL = SPI_CPOL_Low;
+    spi_init.SPI_CPHA = SPI_CPHA_2Edge;
     spi_init.SPI_DataSize = SPI_DataSize_8b;
     spi_init.SPI_FirstBit = SPI_FirstBit_MSB;
     spi_init.SPI_NSS = SPI_NSS_Soft;
@@ -35,9 +34,9 @@ void my_spi_init (uint8_t SPIx, uint8_t mode) {
     switch (SPIx) {
         case MY_SPI_1: {
             /*
-             * PA5 --> SPI1_MOSI
+             * PA7 --> SPI1_MOSI
              * PA6 --> SPI1_MISO
-             * PA7 --> SPI1_SCK
+             * PA5 --> SPI1_SCK
              * PA4 --> SPI1_SS
              */
             my_gpio_init(MY_GPIOA, GPIO_Mode_AF, GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7,
@@ -80,7 +79,7 @@ void my_spi_init (uint8_t SPIx, uint8_t mode) {
              * PB14 --> SPI2_MISO
              * PB13 --> SPI2_SCK
              * PB12 --> SPI2_SS
-             */
+             */ 
             my_gpio_init(MY_GPIOB, GPIO_Mode_AF, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15,
                          GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
 
@@ -98,9 +97,9 @@ void my_spi_init (uint8_t SPIx, uint8_t mode) {
             GPIO_PinAFConfig(GPIOB, GPIO_PinSource13, GPIO_AF_SPI2);
             GPIO_PinAFConfig(GPIOB, GPIO_PinSource14, GPIO_AF_SPI2);
             GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
-            
+
             RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
-            
+
             // Initialize SPI2
             SPI_Init(SPI2, &spi_init);
 
@@ -124,7 +123,7 @@ void my_spi_init (uint8_t SPIx, uint8_t mode) {
              */
             my_gpio_init(MY_GPIOB, GPIO_Mode_AF, GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5,
                          GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
-            
+
             if (mode == MODE_MASTER) {
                 my_gpio_init(MY_GPIOB, GPIO_Mode_OUT, GPIO_Pin_6,
                              GPIO_OType_PP, GPIO_Speed_100MHz, GPIO_PuPd_NOPULL);
@@ -139,7 +138,7 @@ void my_spi_init (uint8_t SPIx, uint8_t mode) {
             GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_SPI3);
             GPIO_PinAFConfig(GPIOB, GPIO_PinSource4, GPIO_AF_SPI3);
             GPIO_PinAFConfig(GPIOB, GPIO_PinSource5, GPIO_AF_SPI3);
-            
+
             RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI3, ENABLE);
 
             // Initialize SPI3

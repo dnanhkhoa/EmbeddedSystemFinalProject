@@ -7,7 +7,7 @@
 const char g_my_math_operators[5] = {'%', '*', '/', '+', '-'};
 
 int my_math_is_operator(char chr) {
-	int res = 1;
+	int res = 0;
 	int i = 0;
 	
 	for (; i < sizeof(g_my_math_operators) / sizeof(char); i++)
@@ -39,6 +39,7 @@ char* my_math_convert(char* src) {
 	struct My_Stack* res = my_stack_create();
 	struct My_Stack* oprt = my_stack_create();
 	struct My_Node* temp;
+	struct My_Node* reserve = NULL;
 	char* balan = (char*) malloc(res->_len + 1);
 	int size;
 
@@ -66,8 +67,11 @@ char* my_math_convert(char* src) {
 					my_stack_push(res, tmp);
 				}
 				else {
-					if (tmp != NULL && tmp->_data == '(')
-						my_stack_pop(oprt);
+					if (tmp != NULL && tmp->_data == '(') {
+						reserve = my_stack_pop(oprt);
+						free(reserve);
+						reserve = NULL;
+					}
 
 					break;
 				}
@@ -261,6 +265,8 @@ int my_math_format_process(const char* src, char* dest, int* a, int* b) {
 							dest[*b] = ')';
 							*b += 1;
 							*a = i - 1;
+							if (*a == strlen(src) - 1)
+								return 1;
 						}
 
 						break;
@@ -293,7 +299,6 @@ int my_math_format_process(const char* src, char* dest, int* a, int* b) {
 
 char* my_math_format(const char* src) {
 	char* dest = NULL;
-	int flag;
 	int* a = (int*) malloc(sizeof(int));
 	int* b = (int*) malloc(sizeof(int));
 	
@@ -303,13 +308,13 @@ char* my_math_format(const char* src) {
 	*a = *b = 0;
 
 	dest = (char*) malloc(sizeof(char) * strlen(src) * 2);
-	flag = my_math_format_process(src, dest, a, b);
+	my_math_format_process(src, dest, a, b);
 
-	if (flag == 0)
-		return NULL;
-	
 	dest[*b] = '\0';
-
+	
+	free(a);
+	free(b);
+	
 	return dest;
 }
 
@@ -329,7 +334,7 @@ char* my_itoa(int x) {
 		div = x / iter;
 		mod = x % iter;
 		
-		res[i] = mod;
+		res[i] = (mod + 48);
 		i++;
 		
 		if (div == 0)
@@ -347,10 +352,14 @@ char* my_math_calculate(const char* src) {
 	int size = strlen(src);
 	// iter to browse string
 	int i = 0;
+	char* reserve = NULL;
 	
 	struct My_Stack* res = my_stack_create();
 	char* num = (char*) malloc(sizeof(char) * 10);
 	int inum = 0;
+	
+	// use for calculate
+	int x, y;
 	
 	if (src == NULL || size == 0)
 		return NULL;
@@ -371,12 +380,16 @@ char* my_math_calculate(const char* src) {
 			my_stack_push_s(res, num);
 
 			if (my_math_is_operator(src[i])) {
-				int x = atoi(my_stack_pop_s(res, 0));
-				int y = atoi(my_stack_pop_s(res, 0));
+				reserve = my_stack_pop_s(res, 0);
+				x = atoi(reserve);
+				free(reserve);
+				
+				reserve = my_stack_pop_s(res, 0);
+				y = atoi(reserve);
+				free(reserve);
 
 				switch (src[i]) {
 				case '+': {
-					
 					num = my_itoa(y + x);
 					my_stack_push_s(res, num);
 					break;

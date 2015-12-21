@@ -17,7 +17,7 @@ void my_led_init(void) {
  * Turn on LEDs
  */
 void my_led_on (uint16_t leds) {
-    //GPIO_ResetBits(GPIOD, LED_BLUE | LED_GREEN | LED_RED | LED_ORANGE);
+    GPIO_ResetBits(GPIOD, LED_BLUE | LED_GREEN | LED_RED | LED_ORANGE);
     GPIO_SetBits(GPIOD, leds);
 }
 

@@ -30,7 +30,6 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>SFD\ST\STM32F4xx\STM32F40x.sfr</SFDFile>
-          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -45,7 +44,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Out\</OutputDirectory>
-          <OutputName>SPI</OutputName>
+          <OutputName>FinalProject</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -98,7 +97,6 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
-          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
@@ -128,7 +126,6 @@
             <RestoreFunctions>1</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
@@ -140,11 +137,9 @@
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-            <UsePdscDebugDescription>1</UsePdscDebugDescription>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>11</TargetSelection>
+          <TargetSelection>13</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -174,10 +169,6 @@
           <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
-          <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
-          <pFcArmRoot></pFcArmRoot>
-          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -221,7 +212,7 @@
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <RoSelD>3</RoSelD>
@@ -356,13 +347,11 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
-            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>HSE_VALUE=8000000, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Lib\ST;.\Lib\CMSIS\inc;.\Driver</IncludePath>
+              <IncludePath>.\Lib\ST;.\Lib\CMSIS\inc;.\Driver;.\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -374,7 +363,6 @@
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
-            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -391,7 +379,6 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
-            <pXoBase></pXoBase>
             <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
@@ -406,11 +393,6 @@
           <GroupName>Startup</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32f40_41xxx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Startup\startup_stm32f40_41xxx.s</FilePath>
-            </File>
-            <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Startup\system_stm32f4xx.c</FilePath>
@@ -419,6 +401,21 @@
               <FileName>stm32f4_discovery.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Lib\ST\stm32f4_discovery.c</FilePath>
+            </File>
+            <File>
+              <FileName>libPDMFilter_Keil.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\Lib\ST\libPDMFilter_Keil.lib</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4_discovery_audio_codec.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\ST\stm32f4_discovery_audio_codec.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f4xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Startup\startup_stm32f4xx.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -451,14 +448,29 @@
               <FilePath>.\Lib\CMSIS\src\stm32f4xx_spi.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_syscfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\CMSIS\src\stm32f4xx_syscfg.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Lib\CMSIS\src\stm32f4xx_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\CMSIS\src\stm32f4xx_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\CMSIS\src\stm32f4xx_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\CMSIS\src\stm32f4xx_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_syscfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\CMSIS\src\stm32f4xx_syscfg.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -495,6 +507,21 @@
               <FileType>1</FileType>
               <FilePath>.\Driver\my_delay.c</FilePath>
             </File>
+            <File>
+              <FileName>my_audio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\my_audio.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_math.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\my_math.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_stack.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\my_stack.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -514,6 +541,16 @@
               <FileName>interrupt_handle.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\interrupt_handle.c</FilePath>
+            </File>
+            <File>
+              <FileName>audio_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\audio_sample.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\my_init.c</FilePath>
             </File>
           </Files>
         </Group>

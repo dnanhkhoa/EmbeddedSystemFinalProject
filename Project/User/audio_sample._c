@@ -1,0 +1,4 @@
+#include "stm32f4xx.h"
+#include "audio_sample.h"
+
+const uint16_t AUDIO_SAMPLE[] = {0};

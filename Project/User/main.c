@@ -10,12 +10,8 @@
  * Email: ddthach95@gmail.com
  */
 
-#include "stm32f4xx_gpio.h"
-#include "my_button.h"
-#include "my_led.h"
-#include "my_usart.h"
-#include "my_spi.h"
-#include "my_delay.h"
+#include "stm32f4xx.h"
+#include "my_init.h"
 #include "my_menu.h"
 
 /**
@@ -23,23 +19,11 @@
  */
 int main(void) {
 
-    // Init clock
+    // Init system clock
     SystemInit();
 
-    // Set 4 bits for preemption, 0 bits for sub priority
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
-
-    // Init sytem tick
-    systick_init();
-
-    // Init user button
-    my_button_init();
-
-    // Init LED
-    my_led_init();
-    
-    // Init USART1
-    my_usart_init(MY_USART_1);
+    // Init device
+    device_init();
 
     // Draw main menu
     menu_content_handle();

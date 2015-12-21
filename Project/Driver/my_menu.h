@@ -2,6 +2,7 @@
 #define _MY_MENU_H
 
 #define BUFFER_LENGTH (512 + 1) // 32 chars + 1 NULL
+#define MAX_LEDS 4
 
 typedef enum {
     MAIN_MENU,
@@ -22,6 +23,7 @@ extern PAGE_TYPE currentPage;
 /*-------------------------------- Prototype --------------------------------*/
 void command_line_led_handle(char* command);
 char* expression_compute(char* expression);
+void advance_led (void);
 
 void menu_logic_handle(void);
 void menu_content_handle(void);
