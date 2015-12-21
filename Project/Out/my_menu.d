@@ -43,3 +43,4 @@
 .\out\my_menu.o: Driver\my_usart.h
 .\out\my_menu.o: Driver\my_delay.h
 .\out\my_menu.o: Driver\my_menu.h
+.\out\my_menu.o: Driver\my_math.h

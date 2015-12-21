@@ -7,6 +7,7 @@
 #include "my_usart.h"
 #include "my_delay.h"
 #include "my_menu.h"
+#include "my_math.h"
 
 PAGE_TYPE currentPage = MAIN_MENU; // Default
 
@@ -19,7 +20,13 @@ bool stopFlag = true; // Flag to stop function
  * Compute an expression and return the result
  */
 char* expression_compute (char* expression) {
-    return expression;
+    char* res = NULL;
+	
+	char* format = my_math_format(expression);
+	char* convert = my_math_convert(format);
+	res = my_math_calculate(convert);
+	
+	return res;
 }
 
 /**

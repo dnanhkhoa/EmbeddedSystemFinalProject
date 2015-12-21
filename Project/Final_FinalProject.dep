@@ -538,7 +538,18 @@ I (.\Lib\CMSIS\inc\stm32f4xx_usart.h)(0x5676F28B)
 I (.\Lib\CMSIS\inc\stm32f4xx_wwdg.h)(0x5676F28B)
 I (.\Lib\CMSIS\inc\misc.h)(0x5676F28A)
 I (Driver\my_delay.h)(0x5676F28A)
-F (.\Driver\my_menu.c)(0x5676FB02)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_menu.o --omf_browse .\out\my_menu.crf --depend .\out\my_menu.d)
+F (.\Driver\my_math.c)(0x567781F7)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_math.o --omf_browse .\out\my_math.crf --depend .\out\my_math.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7C554)
+I (Driver\my_math.h)(0x567781DC)
+I (Driver\my_stack.h)(0x567781CB)
+F (.\Driver\my_stack.c)(0x567781D5)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_stack.o --omf_browse .\out\my_stack.crf --depend .\out\my_stack.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7C554)
+I (Driver\my_stack.h)(0x567781CB)
+F (.\Driver\my_menu.c)(0x56777714)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\my_menu.o --omf_browse .\out\my_menu.crf --depend .\out\my_menu.d)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7C554)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7C554)
 I (.\Lib\CMSIS\inc\stm32f4xx_gpio.h)(0x5676F28A)
@@ -581,7 +592,8 @@ I (Driver\my_spi.h)(0x5676F28A)
 I (Driver\my_usart.h)(0x5676F28A)
 I (Driver\my_delay.h)(0x5676F28A)
 I (Driver\my_menu.h)(0x5676F28A)
-F (.\User\main.c)(0x5676F28B)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
+I (Driver\my_math.h)(0x567781DC)
+F (.\User\main.c)(0x5677664F)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\Lib\ST -I.\Lib\CMSIS\inc -I.\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
 I (.\Lib\CMSIS\inc\stm32f4xx_gpio.h)(0x5676F28A)
 I (.\Lib\ST\stm32f4xx.h)(0x5676F28B)
 I (.\Lib\CMSIS\inc\core_cm4.h)(0x5676F28A)
